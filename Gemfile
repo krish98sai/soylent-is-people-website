@@ -6,11 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 
-# Webpacker for react
-gem 'webpacker', '~> 3.0'
-# Authentication with tokens and Devise
-gem 'devise'
-gem 'devise_token_auth'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
