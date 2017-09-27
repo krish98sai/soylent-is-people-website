@@ -65,5 +65,6 @@ WORKDIR /web
 ADD Gemfile /web/Gemfile
 ADD Gemfile.lock /web/Gemfile.lock
 RUN bundle install
+RUN npm install
 
 ADD . /web
