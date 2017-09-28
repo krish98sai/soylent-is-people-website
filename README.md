@@ -1,24 +1,40 @@
-# README
+### README FOR SOYLENT IS PEOPLE WEBSITE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Development Environment Setup
+#### With Docker
 
-Things you may want to cover:
+Install Docker or Docker Toolbox (Device Specific)
 
-* Ruby version
+Clone the repo above
 
-* System dependencies
+Create a `.env` file (or move .env.dev to .env)
+```text
+MYSQL_ROOT_PASSWORD=root
+RAILS_ENV=development
+```
 
-* Configuration
+**Build** the `web`, and `db` containers:
+```bash
+docker-compose build
+```
 
-* Database creation
+**Install** react in the `web` container:
+```bash
+docker-compose run web npm install
+```
 
-* Database initialization
+**Start** the `web`, `app`, and `db` services
+Omit the `-d` option if you want to see the output of the command, or for debugging:
+```bash
+docker-compose up -d
+```
 
-* How to run the test suite
+If your using Docker Toolbox, the website should be available at:
+http://http://192.168.99.100/
+Otherwise, the website should be available at:
+http://localhost:80
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Stop** and **Remove** containers and networks:
+```bash
+docker-compose down
+```

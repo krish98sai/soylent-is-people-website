@@ -66,6 +66,5 @@ ADD Gemfile /web/Gemfile
 ADD Gemfile.lock /web/Gemfile.lock
 ADD package.json /web/package.json
 RUN bundle install
-RUN npm install
 
 ADD . /web
