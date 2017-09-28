@@ -5,7 +5,11 @@
 
 Install Docker or Docker Toolbox (Device Specific)
 
-Clone the repo above
+**Start** VirtualBox in administrator
+
+**Start** Docker Quickstart Terminal in administrator
+
+**Clone** the repo above
 
 Create a `.env` file (or move .env.dev to .env)
 ```text
@@ -18,7 +22,7 @@ RAILS_ENV=development
 docker-compose build
 ```
 
-**Install** react in the `web` container:
+**Install** React in the `web` container:
 ```bash
 docker-compose run web npm install
 ```
