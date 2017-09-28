@@ -5,29 +5,29 @@
 
 Install Docker or Docker Toolbox (Device Specific)
 
-**Start** VirtualBox in administrator
+1. **Start** VirtualBox in administrator
 
-**Start** Docker Quickstart Terminal in administrator
+2. **Start** Docker Quickstart Terminal in administrator
 
-**Clone** the repo above
+3. **Clone** the repo above
 
-Create a `.env` file (or move .env.dev to .env)
+4. **Create** a `.env` file (or move .env.dev to .env)
 ```text
 MYSQL_ROOT_PASSWORD=root
 RAILS_ENV=development
 ```
 
-**Build** the `web`, and `db` containers:
+5. **Build** the `web`, and `db` containers:
 ```bash
 docker-compose build
 ```
 
-**Install** React in the `web` container:
+6. **Install** React in the `web` container:
 ```bash
 docker-compose run web npm install
 ```
 
-**Start** the `web`, `app`, and `db` services
+7. **Start** the `web`, `app`, and `db` services
 Omit the `-d` option if you want to see the output of the command, or for debugging:
 ```bash
 docker-compose up -d
